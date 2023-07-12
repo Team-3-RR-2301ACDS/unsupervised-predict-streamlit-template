@@ -36,6 +36,11 @@ import numpy as np
 from utils.data_loader import load_movie_titles
 from recommenders.collaborative_based import collab_model
 from recommenders.content_based import content_model
+from pathlib import Path
+
+# Importing markdowns
+def read_markdown_file(markdown_file):
+	return Path(markdown_file).read_text()
 
 # Data Loading
 title_list = load_movie_titles('resources/data/movies.csv')
@@ -100,9 +105,94 @@ def main():
     # -------------------------------------------------------------------
 
     # ------------- SAFE FOR ALTERING/EXTENSION -------------------
+
+    # Building out the "Homepage" page
+    if page_selection == "Homepage":
+        st.write('# RR3 Movies :film_frames:')
+        st.write('### Entertainment to eaze off the stress')
+        st.image('resources/imgs/movies_01.jpg', use_column_width=True)
+        st.subheader("Welcome to RR3 Movies:registered:  :man-raising-hand:")
+        st.subheader("your favorite № 1 Movie Recommender")
+        st.subheader("   ")# just a way to create space between texts
+        st.subheader("   ")
+        st.write("Navigate through the app with the side bar...")
+
+    # Building out the "Information" page
+    if page_selection == "Information":
+        options = ["make your choice here ↓", "General Information", "EDA", "Model Information"]
+        selection = st.sidebar.selectbox("What do you want to know?", options)
+
+        if selection == "make a choice here ↓":
+            st.image('resources/imgs/info_page.jpg', width=500)
+            st.subheader("What kind of info do you need :question:")
+            st.subheader(":arrow_upper_left: Make your choice from the side bar")
+
+        if selection == "General Information":
+            st.info("General Information")
+
+        if selection == "EDA":
+            st.info("Exploratory Data Analysis")
+            st.write('## Some cool insights we got from the data')
+
+        if selection == "Model Information":
+            st.info("Model Information")
+
     if page_selection == "Solution Overview":
         st.title("Solution Overview")
         st.write("Describe your winning approach on this page")
+
+    # Building out the 'About us' page
+	if selection == "About us":
+			st.info("About Us")
+			# Building out the 'about us' page
+			st.image('resources/imgs/tech_team_01.jpg', width= 700)
+			st.subheader("`Mission Statement:`:page_with_curl::page_with_curl:")
+			st.subheader("At RR3 Tech:registered:, we specialize in transforming challenges into\
+						growth opportunities. With a focus on innovation and expertise, we help\
+						companies thrive in today's dynamic business landscape. Harnessing the\
+						power of advanced technology and data-driven insights, we provide tailored\
+						solutions that drive remarkable results.")
+			st.subheader("We pride ourselves in applying the latest technology to provide actionable intel,\
+						in turn helping businesses to grow and nurture a consumer-first mindset.")
+			st.subheader("   ")# just a way to create space between texts
+			st.subheader("   ")
+			st.subheader("`Meet The Team:`:male-technologist::female-factory-worker:")
+
+			st.subheader("   ")
+			# First Member
+			st.image('resources/imgs/Mati.jpeg', width = 300)
+			st.subheader('Greensmill Emmanuel')
+			st.write('#### Data Scientist:', '`Team Lead`')
+			
+			st.subheader("   ")
+			# Second Member
+			st.image('resources/imgs/Buchi.jpeg', width = 300)
+			st.subheader('Onyebuchi Madubuko')
+			st.write('#### Data Scientist:', '`Tech Lead`')
+
+			st.subheader("   ")
+			# Third Member
+			st.image('resources/imgs/Sumaya.jpeg', width = 300)
+			st.subheader('Siphosethu Matomela')
+			st.write('#### Data Scientist:', '`Admin Lead`')
+
+			st.subheader("   ")
+			# Fourth Member
+			st.image('resources/imgs/Cinta.jpeg', width = 300)
+			st.subheader('Onyeka Ekesi')
+			st.write('#### Data Scientist:', '`Asst. Tech Lead`')
+
+			st.subheader("   ")
+			# Fifth Member
+			st.image('resources/imgs/Bolanle.jpeg', width = 300)
+			st.subheader('Tebatso Malotane')
+			st.write('#### Data Scientist:', '`PR Lead`')
+
+			st.subheader("   ")
+			# Sixth Member
+			st.image('resources/imgs/Omolaja.jpeg', width = 300)
+			st.subheader('Wale Kolawole')
+			st.write('#### Data Scientist')
 
     # You may want to add more sections here for aspects such as an EDA,
     # or to provide your business pitch.
