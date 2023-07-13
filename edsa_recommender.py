@@ -50,7 +50,7 @@ def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["Recommender System","Solution Overview"]
+    page_options = ["Homepage", "Recommender System", "Information", "Solution Overview", "About Us"]
 
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
@@ -112,20 +112,15 @@ def main():
         st.write('### Entertainment to eaze off the stress')
         st.image('resources/imgs/movies_01.jpg', use_column_width=True)
         st.subheader("Welcome to RR3 Movies:registered:  :man-raising-hand:")
-        st.subheader("your favorite № 1 Movie Recommender")
+        st.subheader("Your favorite № 1 Movie Recommender")
         st.subheader("   ")# just a way to create space between texts
         st.subheader("   ")
         st.write("Navigate through the app with the side bar...")
 
     # Building out the "Information" page
     if page_selection == "Information":
-        options = ["make your choice here ↓", "General Information", "EDA", "Model Information"]
+        options = ["General Information", "EDA", "Model Information"]
         selection = st.sidebar.selectbox("What do you want to know?", options)
-
-        if selection == "make a choice here ↓":
-            st.image('resources/imgs/info_page.jpg', width=500)
-            st.subheader("What kind of info do you need :question:")
-            st.subheader(":arrow_upper_left: Make your choice from the side bar")
 
         if selection == "General Information":
             st.info("General Information")
@@ -142,57 +137,57 @@ def main():
         st.write("Describe your winning approach on this page")
 
     # Building out the 'About us' page
-	if selection == "About us":
-			st.info("About Us")
-			# Building out the 'about us' page
-			st.image('resources/imgs/tech_team_01.jpg', width= 700)
-			st.subheader("`Mission Statement:`:page_with_curl::page_with_curl:")
-			st.subheader("At RR3 Tech:registered:, we specialize in transforming challenges into\
-						growth opportunities. With a focus on innovation and expertise, we help\
-						companies thrive in today's dynamic business landscape. Harnessing the\
-						power of advanced technology and data-driven insights, we provide tailored\
-						solutions that drive remarkable results.")
-			st.subheader("We pride ourselves in applying the latest technology to provide actionable intel,\
-						in turn helping businesses to grow and nurture a consumer-first mindset.")
-			st.subheader("   ")# just a way to create space between texts
-			st.subheader("   ")
-			st.subheader("`Meet The Team:`:male-technologist::female-factory-worker:")
+    if page_selection == "About Us":
+        st.info("About Us")
+        st.image('resources/imgs/tech_team_01.jpg', width= 700)
+        st.subheader("`Mission Statement:`:page_with_curl::page_with_curl:")
+        st.subheader("At RR3 Tech:registered:, we specialize in transforming challenges into\
+					growth opportunities. With a focus on innovation and expertise, we help\
+					companies thrive in today's dynamic business landscape. Harnessing the\
+					power of advanced technology and data-driven insights, we provide tailored\
+					solutions that drive remarkable results.")
+        st.subheader("We pride ourselves in applying the latest technology to provide actionable intel,\
+					in turn helping businesses to grow and nurture a consumer-first mindset.")
+        st.subheader("   ")# just a way to create space between texts
+        st.subheader("   ")
+        st.subheader("`Meet The Team:`:male-technologist::female-factory-worker:")
+        st.subheader("   ")
+		
+		# First Member
+        st.image('resources/imgs/Buchi.jpeg', width = 300)
+        st.subheader('Greensmill Emmanuel')
+        st.write('#### Data Scientist:', '`Team Lead`')
+        st.subheader("   ")
 
-			st.subheader("   ")
-			# First Member
-			st.image('resources/imgs/Mati.jpeg', width = 300)
-			st.subheader('Greensmill Emmanuel')
-			st.write('#### Data Scientist:', '`Team Lead`')
-			
-			st.subheader("   ")
-			# Second Member
-			st.image('resources/imgs/Buchi.jpeg', width = 300)
-			st.subheader('Onyebuchi Madubuko')
-			st.write('#### Data Scientist:', '`Tech Lead`')
+        # Second Member
+        st.image('resources/imgs/Buchi.jpeg', width = 300)
+        st.subheader('Siphosethu Matomela')
+        st.write('#### Data Scientist:', '`Admin Lead`')
+        st.subheader("   ")
 
-			st.subheader("   ")
-			# Third Member
-			st.image('resources/imgs/Sumaya.jpeg', width = 300)
-			st.subheader('Siphosethu Matomela')
-			st.write('#### Data Scientist:', '`Admin Lead`')
+        # Third Member
+        st.image('resources/imgs/Buchi.jpeg', width = 300)
+        st.subheader('Onyebuchi Madubuko')
+        st.write('#### Data Scientist:', '`Tech Lead`')
+        st.subheader("   ")
 
-			st.subheader("   ")
-			# Fourth Member
-			st.image('resources/imgs/Cinta.jpeg', width = 300)
-			st.subheader('Onyeka Ekesi')
-			st.write('#### Data Scientist:', '`Asst. Tech Lead`')
+        # Fourth Member
+        st.image('resources/imgs/Buchi.jpeg', width = 300)
+        st.subheader('Onyeka Ekesi')
+        st.write('#### Data Scientist:', '`Asst. Tech Lead`')
+        st.subheader("   ")
 
-			st.subheader("   ")
-			# Fifth Member
-			st.image('resources/imgs/Bolanle.jpeg', width = 300)
-			st.subheader('Tebatso Malotane')
-			st.write('#### Data Scientist:', '`PR Lead`')
+        # Fifth Member
+        st.image('resources/imgs/Buchi.jpeg', width = 300)
+        st.subheader('Tebatso Malotane')
+        st.write('#### Data Scientist:', '`Product Lead`')
+        st.subheader("   ")
 
-			st.subheader("   ")
-			# Sixth Member
-			st.image('resources/imgs/Omolaja.jpeg', width = 300)
-			st.subheader('Wale Kolawole')
-			st.write('#### Data Scientist')
+        # Sixth Member
+        st.image('resources/imgs/Buchi.jpeg', width = 300)
+        st.subheader('Wale Kolawole')
+        st.write('#### Data Scientist:')
+        st.subheader("   ")
 
     # You may want to add more sections here for aspects such as an EDA,
     # or to provide your business pitch.
