@@ -109,10 +109,10 @@ def main():
     # Building out the "Homepage" page
     if page_selection == "Homepage":
         st.write('# RR3 Movies :film_frames:')
-        st.write('### Entertainment to eaze off the stress')
+        st.write('### Entertainment to ease off the stress')
         st.image('resources/imgs/movies_01.jpg', use_column_width=True)
-        st.subheader("Welcome to RR3 Movies:registered:  :man-raising-hand:")
-        st.subheader("Your favorite № 1 Movie Recommender")
+        info_markdown = read_markdown_file("resources/info_01.md")
+        st.markdown(info_markdown)
         st.subheader("   ")# just a way to create space between texts
         st.subheader("   ")
         st.write("Navigate through the app with the side bar...")
@@ -124,13 +124,53 @@ def main():
 
         if selection == "General Information":
             st.info("General Information")
+            info_markdown = read_markdown_file("resources/info_02.md")
+            st.markdown(info_markdown)
 
         if selection == "EDA":
             st.info("Exploratory Data Analysis")
             st.write('## Some cool insights we got from the data')
+            st.subheader('Rating Frequency')
+            st.image('resources/imgs/EDA1.png', width = 600)
+            st.write('The bar plot indicates most common ratings used are 4.0, 5.0, 3.0, and 3.5. \
+                     This means that most reviews are relatively positive and this can skew \
+                     recommendations as most ratings end up being highly positive. \
+                     This may indicate that collaborative model may not be as useful as content \
+                     based model because content based models do not rely on ratings but rather \
+                     shared characteristics of different items (such as genre for movies).')
+            st.subheader("")# creating space between the texts and images
+            st.subheader("")# creating space between the texts and images
+
+            st.subheader('Average Rating')
+            st.image('resources/imgs/EDA2.png', width = 600)
+            st.write('The average rating in the dataset hovers just below 4 and shows that \
+                     ratings for movies are most commonly in the more positive range. \
+                     This further buttresses our previous sentiment.')
+            st.subheader("")# creating space between the texts and images
+            st.subheader("")# creating space between the texts and images
+
+            st.subheader('Average number of movies rated')
+            st.image('resources/imgs/EDA3.png', width = 600)
+            st.write('Majority of movies have been rated a fewer times and ends up skewing the\
+                      dataset to the right. This may mean that majority of the dataset\'s movies \
+                     have average ratings that may not represent the true valuation of the movies \
+                     because a sample size of less than 10 ratings may not indicate the general \
+                     human population\'s rating of the movie if it has been seen by more people \
+                     than those who have given a rating.')
+            st.subheader("")# creating space between the texts and images
+            st.subheader("")# creating space between the texts and images
+
+            st.subheader('Ten(10) most popular movies')
+            st.image('resources/imgs/EDA4.png', width = 550)
+            st.write('Here we can see the number of ratings for specific movies which happens to \
+                     be the most popular for the dataset, this gives us a good start for movies \
+                     we can recommend to users based on the amount of rates by users')
 
         if selection == "Model Information":
             st.info("Model Information")
+            st.image('resources/imgs/Modela.jpg', width = 800)
+            info_markdown = read_markdown_file("resources/info_03.md")
+            st.markdown(info_markdown)
 
     if page_selection == "Solution Overview":
         st.title("Solution Overview")
@@ -154,13 +194,13 @@ def main():
         st.subheader("   ")
 		
 		# First Member
-        st.image('resources/imgs/Buchi.jpeg', width = 300)
+        st.image('resources/imgs/Greensmill.jpg', width = 300)
         st.subheader('Greensmill Emmanuel')
         st.write('#### Data Scientist:', '`Team Lead`')
         st.subheader("   ")
 
         # Second Member
-        st.image('resources/imgs/Buchi.jpeg', width = 300)
+        st.image('resources/imgs/Brigette.jpg', width = 300)
         st.subheader('Siphosethu Matomela')
         st.write('#### Data Scientist:', '`Admin Lead`')
         st.subheader("   ")
@@ -172,25 +212,16 @@ def main():
         st.subheader("   ")
 
         # Fourth Member
-        st.image('resources/imgs/Buchi.jpeg', width = 300)
+        st.image('resources/imgs/Onyeka1.jpeg', width = 300)
         st.subheader('Onyeka Ekesi')
         st.write('#### Data Scientist:', '`Asst. Tech Lead`')
         st.subheader("   ")
 
         # Fifth Member
-        st.image('resources/imgs/Buchi.jpeg', width = 300)
+        st.image('resources/imgs/Tebatso1.jpg', width = 300)
         st.subheader('Tebatso Malotane')
         st.write('#### Data Scientist:', '`Product Lead`')
         st.subheader("   ")
-
-        # Sixth Member
-        st.image('resources/imgs/Buchi.jpeg', width = 300)
-        st.subheader('Wale Kolawole')
-        st.write('#### Data Scientist:')
-        st.subheader("   ")
-
-    # You may want to add more sections here for aspects such as an EDA,
-    # or to provide your business pitch.
 
 
 if __name__ == '__main__':
