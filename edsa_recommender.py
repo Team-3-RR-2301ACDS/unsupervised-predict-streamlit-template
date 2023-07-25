@@ -174,7 +174,10 @@ def main():
 
     if page_selection == "Solution Overview":
         st.title("Solution Overview")
-        st.write("Describe your winning approach on this page")
+        st.image('resources/imgs/Model.jpg', width = 800)
+        st.subheader('The Solution')
+        info_markdown = read_markdown_file("resources/info_04.md")
+        st.markdown(info_markdown)
 
     # Building out the 'About us' page
     if page_selection == "About Us":
