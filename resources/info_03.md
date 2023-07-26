@@ -1,0 +1,13 @@
+## *Singular Value Decomposition (SVD):*
+Singular Value Decomposition (SVD) is a matrix factorization technique commonly used in linear algebra and data analysis. It decomposes a matrix into three separate matrices: U, Σ, and V^T, where U and V are orthogonal matrices, and Σ is a diagonal matrix with singular values. SVD is widely used for dimensionality reduction, data compression, noise reduction, and latent semantic analysis. In machine learning, SVD is used in collaborative filtering for recommendation systems and in tasks where reducing the dimensionality of data is desired while preserving essential information.
+
+## *Grid Search:*
+Grid Search is a hyperparameter tuning technique used to find the best combination of hyperparameter values for a machine learning model. In machine learning algorithms, hyperparameters are parameters that are set before the learning process begins and cannot be learned during training. Grid Search involves defining a grid of hyperparameter values and evaluating the model's performance using cross-validation for each combination of hyperparameters. The combination that yields the best performance is then selected as the optimal set of hyperparameters.
+
+## *Non-negative Matrix Factorization (NMF):*
+Non-negative Matrix Factorization (NMF) is a dimensionality reduction and feature extraction technique used for non-negative data. It decomposes a non-negative matrix into two lower-rank non-negative matrices: W and H. The matrix W represents the basis vectors, and matrix H represents the coefficients to reconstruct the original data. NMF is commonly used in areas like image processing, text mining, and topic modeling, where the data has non-negative values and additive combinations of features.
+
+## *SVD++ (SVD Plus Plus):*
+SVD++ is an extension of the traditional Singular Value Decomposition (SVD) matrix factorization method commonly used in collaborative filtering-based recommendation systems. It incorporates explicit feedback (user ratings) and implicit feedback (user interactions) in the recommendation process, making it more effective than SVD alone, especially when dealing with sparse datasets.
+
+In SVD++, the model not only considers the latent features of users and items (as in SVD) but also takes into account the implicit feedback, such as user-item interactions (e.g., clicks, views, purchases). This helps capture the user's preference for items based on their interactions with the items, in addition to their explicit ratings.

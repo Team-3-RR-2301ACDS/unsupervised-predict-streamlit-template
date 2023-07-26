@@ -1,0 +1,5 @@
+The two useful datasets used for the movie recommendation were the movies and tag datasets which provided the genre and tag data which were ultimately combined to form a feature called metadata. This feature was then used in our content based filtering algorithm. The collaborative based filtering algorithm used the ratings data in the train dataset that was provided. The content based filtering method proved to be the better of the two filter methods as it was able to describe more of the data's variance with fewer components/features provided.
+
+The collaborative filtering model had some unsupervised machine learning models applied with it and of which the Singular Value Decomposition (SVD) model performed the best as it provided the lowest Route Mean Squared Error (RMSE) value while still providing the best computational performnce.
+
+With this informed decision, the Singular Value Decomposition (SVD) was used for our movie recommendation
